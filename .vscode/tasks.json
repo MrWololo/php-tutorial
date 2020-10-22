@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "StartServer",
+      "type": "process",
+      "command": "${input:startServer}"
+    },
+    {
+      "label": "StopServer",
+      "type": "process",
+      "command": "${input:stopServer}"
+    },
+    {
+      "label": "StartPHP",
+      "type": "process",
+      "command": "${input:startPHP}"
+    },
+    {
+      "label": "StopPHP",
+      "type": "process",
+      "command": "${input:stopPHP}"
+    },
+
+    {
+      "label": "Start",
+      "dependsOn": ["StartServer"]
+    },
+    {
+      "label": "Stop",
+      "dependsOn": ["StopServer"]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "startServer",
+      "type": "command",
+      "command": "extension.liveServer.goOnline"
+    },
+    {
+      "id": "stopServer",
+      "type": "command",
+      "command": "extension.liveServer.goOffline"
+    },
+  ]
+}
