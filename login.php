@@ -4,10 +4,10 @@
     <h1>Log In</h1>
     <p>No account? <a href="register.php">Register Here</a> </p>
 
-    <form action="" method="post">
+    <form action="includes/login-inc.php" method="post">
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
-        <button type="submit">LOGIN</button>
+        <button type="submit" name="submit">LOGIN</button>
     </form>
 </div>
 

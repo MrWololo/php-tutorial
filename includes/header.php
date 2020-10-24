@@ -1,4 +1,8 @@
-<?php require_once 'database.php'; ?>
+<?php
+session_start();
+require_once 'database.php';
+require_once 'register-inc.php';
+?>
 <html lang="en">
 
 <head>
